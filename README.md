@@ -1,37 +1,18 @@
-# <center> <u>   MetalLB Setup </u> 
+<center> <u> <h1 style="font-size: 50px;">MetalLB Setup</h1> </u> </center>
 
-## Table of contents
-
-[1 . Requirement of MetalLB](#1--requirement-of-metallb)
-
-[2 . What is Kubernetes ?](#2--what-is-kubernetes)
-
-[3 . What is MetalLB ?](#3--what-is-metallb)
-
-
-[4 . Install Kubernetes](#4--install-kubernetes)
-
-
-[5 . Install MetalLB](#5--install-metallb)
-
-
-[6 . Configure MetalLB :](#6--configure-metallb)
-
-
-[7 . Test MetalLB :](#7--test-metallb)
 
 ## 1 . Requirement of MetalLB
 
 In the bare metal deployment kubernetes does not provide the functionality of creating Load Balancer on service by default
 
-**Env detail(OS name/os version/docker-or-podman-or base) :**
+**(i) Env detail (OS Version ) :**
 
 * **Distributor ID :**	Ubuntu
 * **Description :**	Ubuntu 22.04.3 LTS
 * **Release :**	22.04
 * **Codename :**	jammy
 
-**List of tools and technologies:**
+**(ii) List of tools and technologies:**
 
 * **Kubernetes**
 
@@ -179,9 +160,19 @@ Deploy a simple service to test **MetalLB's LoadBalancer functionality.** Create
 
 Wait a moment, and then check the service's external IP:
 
-		kubectl get svc nginx-service   
 
+		
+		kubectl get svc nginx-service  
+	
 You should see an IP address assigned to the **EXTERNAL-IP** column.
 
 MetalLB is now **set up** in your Kubernetes cluster running on Ubuntu. It's helping to distribute traffic and make your applications accessible through the IP you've configured. 
 
+
+
+### 8 . Reference Link:  
+[(i)  Metallb setup](https://metallb.universe.tf/installation/)     
+
+[(ii)  Kubernetes Setup and Configuration ](https://www.linuxtechi.com/install-kubernetes-on-ubuntu-22-04/)    
+
+[(iii)  Metallb Setup and Configuration ](https://www.itsupportwale.com/blog/how-to-install-and-configure-metallb-on-self-managed-kubernetes/)   
