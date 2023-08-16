@@ -5,14 +5,14 @@
 
 In the bare metal deployment kubernetes does not provide the functionality of creating Load Balancer on service by default
 
-**(i) Env detail (OS Version ) :**
+## 2 . Environment  detail :
 
 * **Distributor ID :**	Ubuntu
 * **Description :**	Ubuntu 22.04.3 LTS
 * **Release :**	22.04
 * **Codename :**	jammy
 
-**(ii) List of tools and technologies:**
+## 3 . List of tools and technologies:
 
 * **Kubernetes**
 
@@ -20,18 +20,21 @@ In the bare metal deployment kubernetes does not provide the functionality of cr
 
 * **Podman/Docker**
 
-### 2 . What is  Kubernetes ?
+#### a . What is  Kubernetes ?
 
 Think of Kubernetes as a smart manager for your applications. Imagine you have lots of little workers (containers) who need to run your programs. Kubernetes is like a boss who organizes and manages these workers efficiently. It makes sure your programs are running, scales them when needed, and even replaces them if they fail.   
 
 
-### 3 . What is  MetalLB ?
+#### b . What is  MetalLB ?
 
 Picture MetalLB as a friendly valet for your apps in Kubernetes. Normally, LoadBalancers help direct internet traffic to different services, like websites or apps. MetalLB does this even if you're not on a big cloud service (like Amazon or Google). It helps your Kubernetes apps get the right traffic and lets them talk to the world.
 
 
 
-### 4 .  Install Kubernetes
+
+## 4 .  Command for the setup or configuration :
+
+#### a .  Install Kubernetes
 
 Here's a general outline of the steps you would follow to install Kubernetes on Ubuntu:
 
@@ -83,7 +86,7 @@ Kubernetes requires a network plugin for communication between pods across diffe
 If you have worker nodes, you can join them to the cluster using the token generated during kubeadm init on the master node.   
 
 
-### 5 .  Install MetalLB
+#### b .  Install MetalLB
 MetalLB is a load balancer implementation for bare metal Kubernetes clusters. It provides a network load balancer implementation for services that use the type LoadBalancer.   
 
 * **Step 1 :**   **Install kubectl (if not already installed) :**
@@ -98,7 +101,7 @@ MetalLB can be installed using Kubernetes manifests. Download the MetalLB manife
 		kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/main/manifests/namespace.yaml
 		kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/main/manifests/metallb.yaml
 
-### 6 . Configure MetalLB : 
+#### c . Configure MetalLB : 
 
 After installing the MetalLB manifests, you need to configure it with a Layer 2 configuration. Create a ConfigMap for MetalLB's configuration:
 
@@ -136,7 +139,7 @@ Now you can create a **Kubernetes Load Balancer service** to use MetalLB. For ex
   		selector:
     	app: my-app   
 
-### 7 . Test MetalLB :
+#### d . Test MetalLB :
 
 Deploy a simple service to test **MetalLB's LoadBalancer functionality.** Create a file named nginx-service.yaml:   
 
@@ -170,7 +173,7 @@ MetalLB is now **set up** in your Kubernetes cluster running on Ubuntu. It's hel
 
 
 
-### 8 . Reference Link:  
+## 5 . Reference Link:  
 [(i)  Metallb setup](https://metallb.universe.tf/installation/)     
 
 [(ii)  Kubernetes Setup and Configuration ](https://www.linuxtechi.com/install-kubernetes-on-ubuntu-22-04/)    
