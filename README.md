@@ -14,18 +14,18 @@ In the bare metal deployment kubernetes does not provide the functionality of cr
 
 ## 3 . List of tools and technologies:
 
-* **Kubernetes**
+* **Kubernetes Version - 1.25**
 
-* **MetalLB**
+* **MetalLB Latest**
 
-* **Podman/Docker**
+* **Podman/Docker  Latest**
 
-#### a . What is  Kubernetes ?
+#### a . Definition of  Kubernetes .
 
 Think of Kubernetes as a smart manager for your applications. Imagine you have lots of little workers (containers) who need to run your programs. Kubernetes is like a boss who organizes and manages these workers efficiently. It makes sure your programs are running, scales them when needed, and even replaces them if they fail.   
 
 
-#### b . What is  MetalLB ?
+#### b . Definition of  MetalLB .
 
 Picture MetalLB as a friendly valet for your apps in Kubernetes. Normally, LoadBalancers help direct internet traffic to different services, like websites or apps. MetalLB does this even if you're not on a big cloud service (like Amazon or Google). It helps your Kubernetes apps get the right traffic and lets them talk to the world.
 
@@ -172,10 +172,9 @@ You should see an IP address assigned to the **EXTERNAL-IP** column.
 MetalLB is now **set up** in your Kubernetes cluster running on Ubuntu. It's helping to distribute traffic and make your applications accessible through the IP you've configured. 
 
 
-
 ## 5 . Reference Link:  
-[(i)  Metallb setup](https://metallb.universe.tf/installation/)     
+* [Metallb setup](https://metallb.universe.tf/installation/)     
 
-[(ii)  Kubernetes Setup and Configuration ](https://www.linuxtechi.com/install-kubernetes-on-ubuntu-22-04/)    
+* [  Kubernetes Setup and Configuration ](https://www.linuxtechi.com/install-kubernetes-on-ubuntu-22-04/)    
 
-[(iii)  Metallb Setup and Configuration ](https://www.itsupportwale.com/blog/how-to-install-and-configure-metallb-on-self-managed-kubernetes/)   
+* [ Metallb Setup and Configuration ](https://www.itsupportwale.com/blog/how-to-install-and-configure-metallb-on-self-managed-kubernetes/)   
