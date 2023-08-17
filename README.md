@@ -1,7 +1,7 @@
 <center> <u> <h1 style="font-size: 50px;">MetalLB Setup</h1> </u> </center>
 
 
-## 1 . Requirement of MetalLB
+## 1 . Requirement of MetalLB :
 
 In the bare metal deployment kubernetes does not provide the functionality of creating Load Balancer on service by default
 
@@ -16,25 +16,27 @@ In the bare metal deployment kubernetes does not provide the functionality of cr
 
 * **Kubernetes Version - 1.25**
 
-* **MetalLB Latest**
+* **MetalLB - Latest Version**
 
-* **Podman/Docker  Latest**
+* **Podman/Docker - Latest Version**
 
-#### a . Definition of  Kubernetes .
+#### a . Definition of  Kubernetes :
 
 Think of Kubernetes as a smart manager for your applications. Imagine you have lots of little workers (containers) who need to run your programs. Kubernetes is like a boss who organizes and manages these workers efficiently. It makes sure your programs are running, scales them when needed, and even replaces them if they fail.   
 
 
-#### b . Definition of  MetalLB .
+#### b . Definition of  MetalLB :
 
 Picture MetalLB as a friendly valet for your apps in Kubernetes. Normally, LoadBalancers help direct internet traffic to different services, like websites or apps. MetalLB does this even if you're not on a big cloud service (like Amazon or Google). It helps your Kubernetes apps get the right traffic and lets them talk to the world.
 
+#### c . Definition of  Podman/Docker  :
 
+Docker and Podman  are tools  used for containerization , which helps package and run applications  with all their dependencies in isolated environments. Docker is widely known and uses a central daemon, while Podman offers similar functionality without a central daemon, making it more lightweight and secure. Both simplify software deployment across different systems.
 
 
 ## 4 .  Command for the setup or configuration :
 
-#### a .  Install Kubernetes
+#### a .  Install Kubernetes :
 
 Here's a general outline of the steps you would follow to install Kubernetes on Ubuntu:
 
@@ -86,7 +88,7 @@ Kubernetes requires a network plugin for communication between pods across diffe
 If you have worker nodes, you can join them to the cluster using the token generated during kubeadm init on the master node.   
 
 
-#### b .  Install MetalLB
+#### b .  Install MetalLB :
 MetalLB is a load balancer implementation for bare metal Kubernetes clusters. It provides a network load balancer implementation for services that use the type LoadBalancer.   
 
 * **Step 1 :**   **Install kubectl (if not already installed) :**
