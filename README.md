@@ -100,8 +100,8 @@ If kubectl is not already installed, you can install it using the following comm
 * **Step 2 :**   **Install MetalLB :**
 MetalLB can be installed using Kubernetes manifests. Download the MetalLB manifest files using kubectl:
 
-		kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/main/manifests/namespace.yaml
-		kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/main/manifests/metallb.yaml
+		kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.13.10/config/manifests/metallb-native.yaml 
+		kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.13.10/config/manifests/metallb-frr.yaml
 
 #### c . Configure MetalLB : 
 
@@ -179,4 +179,4 @@ MetalLB is now **set up** in your Kubernetes cluster running on Ubuntu. It's hel
 
 * [  Kubernetes Setup and Configuration ](https://www.linuxtechi.com/install-kubernetes-on-ubuntu-22-04/)    
 
-* [ Metallb Setup and Configuration ](https://www.itsupportwale.com/blog/how-to-install-and-configure-metallb-on-self-managed-kubernetes/)   
+* [ Metallb Setup and Configuration ](https://www.itsupportwale.com/blog/how-to-install-and-configure-metallb-on-self-managed-kubernetes/)  
